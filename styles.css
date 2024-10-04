@@ -1,0 +1,500 @@
+/* Tipografía y colores generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Estilo general de secciones */
+section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #000000, #06b6d4);
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+/* Fondo Parallax */
+.header-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('your-image.jpg'); /* Cambia la imagen */
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1; /* Detrás del contenido */
+}
+
+
+/* Menú */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f5f5f5;
+}
+
+nav.scrolled {
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: background-color 0.3s ease;
+}
+
+/* Animación de desvanecimiento suave (Fade-In) */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Hero */
+.hero h1 {
+    font-size: 3em;
+    animation: fadeSlideIn 2s ease forwards;
+}
+
+.hero p {
+    font-size: 1.5em;
+    animation: fadeSlideIn 2.5s ease forwards;
+}
+
+.hero .btn {
+    padding: 10px 20px;
+    background-color: white;
+    color: #06b6d4;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-top: 20px;
+    font-weight: 700;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero .btn:hover {
+    transform: scale(1.05);
+    background-color: #06b6d4;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Ondulación SVG */
+.wave {
+    position: relative;
+    top: -5px;
+    width: 100%;
+    height: auto;
+}
+
+/* Animación de deslizamiento */
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Proyectos */
+.project-card {
+    background-color: #ffffff;
+    color: #333;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.project-card h3 {
+    font-size: 1.5em;
+    color: #0e5966;
+}
+
+.project-card p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-card a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:#0e5966;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.project-card a:hover {
+    background-color: #0e5966;
+}
+
+/* Sección de redes sociales */
+#social {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #f5f5f5;
+}
+
+#social h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 2em;
+    color: #333;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    padding: 10px;
+    background: #f5f5f5;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.social-icons a:hover {
+    color: #06b6d4;
+    transform: scale(1.2);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Sección de habilidades */
+#skills {
+    background-color: #e5e7eb;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.skills-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.skill-bar {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    height: 20px;
+}
+
+.skill-progress {
+    height: 100%;
+    width: 0; /* Inicialmente la barra estará vacía */
+    background-color: #06b6d4;
+    border-radius: 5px;
+    transition: width 1.5s ease-out; /* Animación suave del ancho */
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+/* Sección de formulario de contacto */
+#contact {
+    background-color: #e5e7eb;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+/* Estilo de los campos del formulario */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+}
+
+/* Botón de envío */
+.contact-form .btn {
+    padding: 10px 20px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .btn:hover {
+    background-color: #06b6d4;
+    transform: scale(1.05);
+}
+
+/* Animación para que el formulario aparezca al ser visible */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Efecto de animación en movimiento */
+@keyframes fillBar {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+
+/* Sección de testimonios */
+#testimonials {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.testimonial-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.testimonial {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.testimonial h4 {
+    font-size: 1.1em;
+    color: #06b6d4;
+}
+
+.testimonial span {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Botón de scroll hacia arriba */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #06b6d4;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Por defecto no se muestra */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#scrollToTopBtn:hover {
+    background-color: #06b6d4;
+    transform: scale(1.1);
+}
+
+#scrollToTopBtn i {
+    margin: 0;
+}
+
+/* Estilo para la sección 'Sobre mí' */
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    text-align: left;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Añade este estilo para distribuir los elementos */
+    max-width: 900px;
+    gap: 40px;
+}
+
+/* Estilo para el texto */
+.about-text {
+    flex: 1; /* Ocupa todo el espacio disponible */
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+/* Estilo para la imagen */
+.about-photo {
+    flex: 0 0 auto; /* Mantiene el tamaño de la imagen fijo */
+}
+
+.about-photo img {
+    max-width: 250px; /* Controla el tamaño de la imagen */
+    border-radius: 10px; /* Bordes ligeramente redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Añade sombra */
+    transition: transform 0.3s ease;
+}
+
+/* Animación de hover en la imagen */
+.about-photo img:hover {
+    transform: scale(1.05);
+}
+
+/* Animación de aparición */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px); /* Desplaza hacia abajo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Posición final */
+    }
+}
+
+/* Aplica la animación a la imagen */
+.appear-animation {
+    opacity: 0;
+    animation: fadeInUp 1.5s ease forwards; /* Duración y tipo de la animación */
+}
+
